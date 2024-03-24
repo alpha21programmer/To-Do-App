@@ -1,12 +1,20 @@
-const todoValue = document.getElementById("todoText");
+const  listContainer = document.getElementById("list-container");
 
-const  listItems = document.getElementById("#list-items");
+const  inputBox = document.querySelector("button");
 
-const  addUpdateClick = document.querySelector("#ADD");
+function addTask() {
+    if (inputBox.value === ''){
+        alert("You must write something");
 
+    } else{
+        let li = document.createElement("li");
+        li.innerHTML = inputBox.value;
+        listContainer.appendChild(li);
+        
+    }
 
-
+} ;
      
-    
+button.addEventlistener("click", addTask());
 
     

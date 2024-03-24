@@ -68,37 +68,45 @@ button {
     color: #fff;
     
 }
+ul {
+    list-style: none;
+    padding: 0;
+}
 
 ul li {
-    list-style: none;
-    margin-left: 5px;
     font-size: 17px;
-    padding: 12px 8px 12px 8px;
+    padding: 12px 8px ;
     user-select: none;
     cursor: pointer;
     position: relative;
+    display: flex;
+    align-items: center;
     
 
 }
 
 ul li::before {
      content: '';
-     position: absolute;
-     height: 28px;
-     width: 28px;
+     height: 24px;
+     width: 24px;
      border-radius: 50%;
      background-image: url(images/unchecked.png);
      background-size: cover;
      background-position: center;
+     margin-right: 10px;
      
      
 }
 
-     li {
-        margin-left: 5px;
-        padding-left: 10px;
-        
-    }
+ul li.checked {
+    color: #e00707;
+    text-decoration: line-through;
+
+}
+
+ul li.checked::before {
+    background-image: url(images/checked.png);
+}
 
 
 
